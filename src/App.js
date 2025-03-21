@@ -4,6 +4,7 @@ import Footer from "./components/Footer.js"
 import Items from "./components/Items.js";
 import ShowFullItem from "./components/ShowFullItem.js";
 import Categories from "./components/Categories.js";
+import './styles/cart.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -141,11 +142,16 @@ class App extends React.Component {
     this.deleteOrder = this.deleteOrder.bind(this)
     this.chooseCategory = this.chooseCategory.bind(this)
     this.onShowItem = this.onShowItem.bind(this)
+    this.updateQuantity = this.updateQuantity.bind(this)
   }
   render() {
     return (
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
+        <Header 
+          orders={this.state.orders} 
+          onDelete={this.deleteOrder}
+          onUpdateQuantity={this.updateQuantity}
+        />
         <Categories chooseCategory={this.chooseCategory}/>
         <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder}/>
 
@@ -176,12 +182,38 @@ class App extends React.Component {
   addToOrder(item) {
     let isInArray = false
     this.state.orders.forEach(el => {
-        if(el.id === item.id) isInArray = true 
+        if(el.id === item.id) {
+            isInArray = true
+            // Update quantity if item exists
+            this.setState({
+                orders: this.state.orders.map(el => 
+                    el.id === item.id 
+                        ? {...el, quantity: el.quantity + 1}
+                        : el
+                )
+            })
+        }
     })
     if(!isInArray) {
-        this.setState({orders: [...this.state.orders, item]})
+        this.setState({orders: [...this.state.orders, {...item, quantity: 1}]})
     }
+  }
+
+  updateQuantity(id, change) {
+    this.setState({
+        orders: this.state.orders.map(el => {
+            if(el.id === id) {
+                const newQuantity = el.quantity + change
+                if(newQuantity <= 0) {
+                    return null // Will be filtered out
+                }
+                return {...el, quantity: newQuantity}
+            }
+            return el
+        }).filter(Boolean) // Remove items with null (quantity <= 0)
+    })
   }
 }
 
 export default App;
+

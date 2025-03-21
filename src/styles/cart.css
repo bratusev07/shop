@@ -1,0 +1,72 @@
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.quantity-button {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.quantity-button svg {
+    width: 12px;
+    height: 12px;
+}
+
+.quantity-button:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity {
+    min-width: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.shop-cart .item {
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.shop-cart .item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.shop-cart .item h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.shop-cart .item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.shop-cart .delete-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ff4444;
+}
+
+.shop-cart .summ {
+    padding: 20px;
+    font-weight: bold;
+    text-align: right;
+} 
