@@ -10,12 +10,20 @@ export class Categories extends Component {
                     name: 'Все'
                 },
                 {
-                    key: 'electronic',
-                    name: 'Электроника'
+                    key: 'Boys',
+                    name: 'Мальчики'
                 },
                 {
-                    key: 'audio',
-                    name: 'Аудио'
+                    key: 'Girls',
+                    name: 'Девочки'
+                },
+                {
+                    key: 'Pet',
+                    name: 'Животные'
+                },
+                {
+                    key: 'Other',
+                    name: 'Другое'
                 }
             ]
         }

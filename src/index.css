@@ -6,7 +6,7 @@
 body {
     background: #fff;
     color: #222;
-    font-family: 'OpenSans';
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -117,7 +117,7 @@ header .shop-cart .item p {
 
 header .presentation {
     margin: 50px 0;
-    background: url(./img/image.jpg) no-repeat;
+    background: url(https://i.imgur.com/8JQZqXZ.jpg) no-repeat;
     width: 100%;
     height: 500px;
     background-size: cover;
@@ -128,7 +128,7 @@ header .presentation {
 }
 
 header .presentation::after {
-    content: 'Лучшие товары для дома';
+    content: 'Коллекция аниме фигурок';
     position: absolute;
     top: 100px;
     left: 50px;
@@ -139,9 +139,9 @@ header .presentation::after {
 }
 
 header .presentation::before {
-    content: 'по низким ценам';
+    content: 'для истинных ценителей';
     position: absolute;
-    top: 250px;
+    top: 270px;
     left: 50px;
     width: 300px;
     font-size: 15px;
