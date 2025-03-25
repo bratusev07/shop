@@ -1,0 +1,11 @@
+/* Стили подвала сайта
+ * Содержит стили для нижней части сайта
+ * Включает отступы, фон и тени для подвала
+ */
+footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 30px 0;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+} 

@@ -4,7 +4,7 @@ import Footer from "./components/Footer.js"
 import Items from "./components/Items.js";
 import ShowFullItem from "./components/ShowFullItem.js";
 import Categories from "./components/Categories.js";
-import './styles/cart.css';
+import './styles/index.css';
 
 class App extends React.Component {
   constructor(props) {

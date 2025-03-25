@@ -1,0 +1,23 @@
+/* Базовые стили и CSS сброс
+ * Содержит фундаментальные стили, применяемые ко всему приложению
+ * Включает сброс отступов, стили body и контейнера-обертки
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f9fa;
+    color: #2d3436;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+} 

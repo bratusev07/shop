@@ -1,0 +1,40 @@
+/* Стили шапки сайта
+ * Содержит стили для главной навигационной шапки
+ * Включает логотип, меню навигации и стили контейнера шапки
+ */
+header {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+header .logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #2d3436;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #2d3436;
+}
+
+header ul.nav li:hover {
+    color: #e74c3c;
+    transform: translateY(-2px);
+} 

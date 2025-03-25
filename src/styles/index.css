@@ -1,0 +1,12 @@
+/* Главный файл стилей
+ * Импортирует все CSS модули в правильном порядке
+ * Обеспечивает правильную каскадность стилей
+ */
+@import './base.css';
+@import './header.css';
+@import './cart.css';
+@import './presentation.css';
+@import './categories.css';
+@import './main.css';
+@import './footer.css';
+@import './media.css'; 
